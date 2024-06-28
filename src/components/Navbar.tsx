@@ -8,10 +8,10 @@ const Navbar = () => {
     <div className="flex w-full">
       <nav className="flex justify-between items-center w-full  text-lg">
         <div>logo</div>
-        <div className="grid grid-cols-5 space-x-6 border-b border-black">
+        <div className="grid grid-cols-5 space-x-6 border-b border-sky-500">
           <Link
             className={clsx("p-5 flex justify-center", {
-              "border-b-2 border-black": location.pathname === "/",
+              "border-b-2 border-sky-600": location.pathname === "/",
             })}
             to="/"
           >
@@ -19,7 +19,7 @@ const Navbar = () => {
           </Link>
           <Link
             className={clsx("p-5 flex justify-center", {
-              "border-b-2 border-black": location.pathname === "/about",
+              "border-b-2 border-sky-600": location.pathname === "/about",
             })}
             to="/about"
           >
@@ -27,7 +27,7 @@ const Navbar = () => {
           </Link>
           <Link
             className={clsx("p-5 flex justify-center", {
-              "border-b-2 border-black": location.pathname === "/tour",
+              "border-b-2 border-sky-600": location.pathname === "/tour",
             })}
             to="/tour"
           >
@@ -35,7 +35,7 @@ const Navbar = () => {
           </Link>
           <Link
             className={clsx("p-5 flex justify-center", {
-              "border-b-2 border-black": location.pathname === "/contact",
+              "border-b-2 border-sky-600": location.pathname === "/contact",
             })}
             to="/contact"
           >
@@ -43,7 +43,7 @@ const Navbar = () => {
           </Link>
           <Link
             className={clsx("p-5 flex justify-center", {
-              "border-b-2 border-black": location.pathname === "/destination",
+              "border-b-2 border-sky-600": location.pathname === "/destination",
             })}
             to="/destination"
           >

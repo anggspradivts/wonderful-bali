@@ -30,7 +30,7 @@ const Destination: React.FC<DestinationProps> = ({ data }) => {
             </div>
             <div className="w-10/12">
               <p className="text-lg">{destination.name}</p>
-              <p className="text-xs">{destination.description}</p>
+              <p className="text-xs md:text-md">{destination.description}</p>
             </div>
           </div>
         ))}
