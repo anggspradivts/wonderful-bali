@@ -5,13 +5,13 @@ const Navbar = () => {
   const location = useLocation();
 
   return (
-    <div className="flex w-full">
+    <div className="flex w-full font-semibold">
       <nav className="flex justify-between items-center w-full  text-lg">
         <div>logo</div>
         <div className="grid grid-cols-5 space-x-6 border-b border-sky-500">
           <Link
             className={clsx("p-5 flex justify-center", {
-              "border-b-2 border-sky-600": location.pathname === "/",
+              "border-b-2 border-sky-600 text-sky-500": location.pathname === "/",
             })}
             to="/"
           >
@@ -19,7 +19,7 @@ const Navbar = () => {
           </Link>
           <Link
             className={clsx("p-5 flex justify-center", {
-              "border-b-2 border-sky-600": location.pathname === "/about",
+              "border-b-2 border-sky-600 text-sky-500": location.pathname === "/about",
             })}
             to="/about"
           >
@@ -27,7 +27,7 @@ const Navbar = () => {
           </Link>
           <Link
             className={clsx("p-5 flex justify-center", {
-              "border-b-2 border-sky-600": location.pathname === "/tour",
+              "border-b-2 border-sky-600 text-sky-500": location.pathname === "/tour",
             })}
             to="/tour"
           >
@@ -35,7 +35,7 @@ const Navbar = () => {
           </Link>
           <Link
             className={clsx("p-5 flex justify-center", {
-              "border-b-2 border-sky-600": location.pathname === "/contact",
+              "border-b-2 border-sky-600 text-sky-500": location.pathname === "/contact",
             })}
             to="/contact"
           >
@@ -43,7 +43,7 @@ const Navbar = () => {
           </Link>
           <Link
             className={clsx("p-5 flex justify-center", {
-              "border-b-2 border-sky-600": location.pathname === "/destination",
+              "border-b-2 border-green-600 text-green-500": location.pathname === "/destination",
             })}
             to="/destination"
           >
