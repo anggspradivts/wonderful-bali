@@ -12,7 +12,7 @@ const Home = () => {
 
   return (
     <div className="flex flex-col text-center w-full">
-      <div className="text-center py-28">
+      <div className="text-center py-40 md:py-28">
         <h1 className="text-6xl font-extrabold montserrat">
           Wonderfull Places
         </h1>
