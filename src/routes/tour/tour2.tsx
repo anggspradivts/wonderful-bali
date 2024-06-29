@@ -1,20 +1,24 @@
+import { Image } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const Tour2 = () => {
   const tourPackages = [
     {
+      id: "1",
       title: "Tour Packages 1",
       img: "",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit beatae alias veritatis quo illum assumenda incidunt pariatur quidem cum voluptatibus temporibus iure consequuntur deleniti doloremque, corporis explicabo ea, minus magnam?",
     },
     {
+      id: "2",
       title: "Tour Packages 2",
       img: "",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit beatae alias veritatis quo illum assumenda incidunt pariatur quidem cum voluptatibus temporibus iure consequuntur deleniti doloremque, corporis explicabo ea, minus magnam?",
     },
     {
+      id: "3",
       title: "Tour Packages 3",
       img: "",
       description:
@@ -34,12 +38,12 @@ const Tour2 = () => {
         {tourPackages.map((item, index) => (
           <div
             key={index}
-            onClick={() => navigate("/")}
+            onClick={() => navigate(`/tour/${item.id}`)}
             role="button"
             className="md:flex md:h-[200px] space-x-2 shadow-xl hover:scale-95 transition-all duration-300"
           >
-            <div className="bg-slate-300 md:w-3/12">
-              <img src="" alt="" />
+            <div className="bg-slate-300 md:w-3/12 flex justify-center items-center">
+              {item.img ? <img src={item.img} alt={item.title} /> : <Image />}
             </div>
             <div className="md:w-9/12 p-1">
               <p className="text-xl font-semibold">{item.title}</p>

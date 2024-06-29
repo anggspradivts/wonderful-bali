@@ -12,6 +12,7 @@ import Destination from "./routes/destination/destination";
 import { data } from "./data/data";
 import Contact from "./routes/contact/contact";
 import Tour2 from "./routes/tour/tour2";
+import TourDetailPage from "./routes/tour/tourid/tourdetail";
 
 function App() {
 
@@ -21,8 +22,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        {/* <Route path="/tour" element={<Tour />}/> */}
         <Route path="/tour" element={<Tour2 />}/>
+          <Route path="/tour/:id" element={<TourDetailPage />}/>
         <Route path="/contact" element={<Contact />}/>
         <Route path="/destination" element={<Destination data={data} />}/>
       </Routes>

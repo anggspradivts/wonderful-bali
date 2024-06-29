@@ -16,7 +16,7 @@ const Destination: React.FC<DestinationProps> = ({ data }) => {
 
   const handleClick = () => {
     setLoadMore(loadMore + 3);
-  }
+  };
 
   return (
     <div className="py-20">
@@ -33,9 +33,16 @@ const Destination: React.FC<DestinationProps> = ({ data }) => {
       <div className="destination-sec md:mx-36 mt-10 space-y-4">
         <div className="text-lg">Popular Places in Bali🔥</div>
         {topPlaces.map((destination, index) => (
-          <div key={index} className="flex md:h-[100px] space-x-2 shadow-lg hover:scale-95 transition-all duration-300">
+          <div
+            key={index}
+            className="flex md:h-[100px] space-x-2 shadow-lg hover:scale-95 transition-all duration-300"
+          >
             <div className=" w-2/12">
-              <img src={destination.img} alt="" className="h-full w-full object-cover" />
+              <img
+                src={destination.img}
+                alt=""
+                className="h-full w-full object-cover"
+              />
             </div>
             <div className="w-10/12">
               <p className="text-lg font-semibold">{destination.name}</p>
@@ -45,16 +52,8 @@ const Destination: React.FC<DestinationProps> = ({ data }) => {
         ))}
         <div className="flex justify-center">
           {loadMore < data.length ? (
-            // <button
-            //   className="p-2 bg-sky-500 rounded"
-            //   onClick={() => setLoadMore((prev) => prev + 5)}
-            // >
-            //   Load More
-            // </button>
-            <LoaderBtn content="Load More" onClick={handleClick}/>
-          ) : (
-            null
-          )}
+            <LoaderBtn content="Load More" onClick={handleClick} />
+          ) : null}
         </div>
       </div>
     </div>
