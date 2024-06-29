@@ -1,9 +1,10 @@
 import { useState } from "react";
 import LoaderBtn from "../../components/ui/LoaderBtn";
+import { useNavigate } from "react-router-dom";
 
 interface DestinationProps {
   data: {
-    id: number;
+    id: string;
     name: string;
     img: string;
     description: string;
@@ -13,6 +14,7 @@ interface DestinationProps {
 const Destination: React.FC<DestinationProps> = ({ data }) => {
   const [loadMore, setLoadMore] = useState(3);
   const topPlaces = data.slice(0, loadMore);
+  const navigate = useNavigate();
 
   const handleClick = () => {
     setLoadMore(loadMore + 3);
@@ -34,7 +36,9 @@ const Destination: React.FC<DestinationProps> = ({ data }) => {
         <div className="text-lg">Popular Places in Bali🔥</div>
         {topPlaces.map((destination, index) => (
           <div
+            role="button"
             key={index}
+            onClick={() => navigate(`/destination/${destination.id}`)}
             className="flex md:h-[100px] space-x-2 shadow-lg hover:scale-95 transition-all duration-300"
           >
             <div className=" w-2/12">

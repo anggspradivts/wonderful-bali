@@ -16,12 +16,18 @@ const Home = () => {
         <h1 className="text-6xl font-extrabold montserrat">
           <span className="text-green-500">Wonderfull</span> Places
         </h1>
-        <h1 className="text-6xl font-extrabold montserrat">In <span className="">Bali</span></h1>
+        <h1 className="text-6xl font-extrabold montserrat">
+          In <span className="">Bali</span>
+        </h1>
       </div>
       <div className="grid md:grid-cols-3 gap-10">
         {place.map((card, index) => (
           <div key={index} className="p-1">
-            <div className="rounded-lg h-[200px] w-auto overflow-hidden shadow-2xl">
+            <div
+              role="button"
+              onClick={() => navigate(`/destination/${card.id}`)}
+              className="rounded-lg h-[200px] w-auto overflow-hidden shadow-2xl hover:-translate-y-2 transition-all duration-300"
+            >
               <img
                 src={`${card.img}`}
                 alt={card.name}

@@ -42,7 +42,7 @@ const Tour2 = () => {
             role="button"
             className="md:flex md:h-[200px] space-x-2 shadow-xl hover:scale-95 transition-all duration-300"
           >
-            <div className="bg-slate-300 md:w-3/12 flex justify-center items-center">
+            <div className="hidden md:flex bg-slate-300 md:w-3/12 justify-center items-center">
               {item.img ? <img src={item.img} alt={item.title} /> : <Image />}
             </div>
             <div className="md:w-9/12 p-1">

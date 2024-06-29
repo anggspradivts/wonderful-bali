@@ -22,7 +22,7 @@ const Contact = () => {
         <h1 className="">Contact Us</h1>
         <PhoneCall className="h-14 w-14 text-sky-500" />
       </header>
-      <div className="grid md:grid-cols-2">
+      <div className="grid md:grid-cols-2 mb-[200px]">
         <div className="contac-sec">
           <div className="p-5 border border-sky-500">
             <form

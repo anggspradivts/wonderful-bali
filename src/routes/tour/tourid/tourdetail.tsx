@@ -29,36 +29,60 @@ const TourDetailPage = () => {
       description:
         "Feature 3. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti, quas repellat eos reiciendis illum labore porro? At vitae qui, iste nemo officia laudantium mollitia, dignissimos sunt cumque aut eius cum?",
     },
+    {
+      id: "4",
+      name: "Feature 4",
+      description:
+        "Feature 4. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti, quas repellat eos reiciendis illum labore porro? At vitae qui, iste nemo officia laudantium mollitia, dignissimos sunt cumque aut eius cum?",
+    },
+    {
+      id: "5",
+      name: "Feature 5",
+      description:
+        "Feature 5. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti, quas repellat eos reiciendis illum labore porro? At vitae qui, iste nemo officia laudantium mollitia, dignissimos sunt cumque aut eius cum?",
+    },
+    {
+      id: "6",
+      name: "Feature 6",
+      description:
+        "Feature 6. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti, quas repellat eos reiciendis illum labore porro? At vitae qui, iste nemo officia laudantium mollitia, dignissimos sunt cumque aut eius cum?",
+    },
   ];
 
   return (
     <div className="py-20">
-      <div className="grid grid-cols-2 h-screen">
+      <div className="grid md:grid-cols-2 h-screen gap-x-5">
         <div className="sidebar">
           <p className="text-2xl">List of Feature on package {id}</p>
-          <ul>
+          <div className="md:grid md:grid-cols-1 max-h-[100px] md:max-h-full overflow-auto space-y-1">
             {feature.map((f, index) => (
-              <li
-                key={index}
-                role="button"
-                onClick={() =>
-                  setFeatureState({
-                    id: f.id,
-                    name: f.name,
-                    description: f.description,
-                  })
-                }
-                className={clsx("hover:text-sky-500", {
-                  "text-sky-500": f.id === featureState.id,
-                })}
-              >
-                {f.name}
-              </li>
+              <div key={index}>
+                <button
+                  onClick={() =>
+                    setFeatureState({
+                      id: f.id,
+                      name: f.name,
+                      description: f.description,
+                    })
+                  }
+                  className={clsx(
+                    "inline-block px-2 rounded-full hover:bg-slate-300 bg-slate-200",
+                    {
+                      "bg-slate-300": f.id === featureState.id,
+                    }
+                  )}
+                >
+                  {f.name}
+                </button>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
-        <div>
-          <h1 className="text-4xl m:text-6xl font-bold">Package Title {id}</h1>
+        <div className="space-y-3">
+          <h1 className="text-4xl m:text-6xl font-bold rounded-full">
+            Package Title {id}
+          </h1>
+          <p className="font-semibold">About this package:</p>
           <div className="space-y-5">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.

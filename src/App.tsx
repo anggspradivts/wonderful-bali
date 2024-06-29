@@ -8,11 +8,12 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import About from "./routes/about/about";
 import Destination from "./routes/destination/destination";
-
-import { data } from "./data/data";
 import Contact from "./routes/contact/contact";
 import Tour2 from "./routes/tour/tour2";
-import TourDetailPage from "./routes/tour/tourid/tourdetail";
+import TourDetailPage from "./routes/tour/tourId/tourdetail";
+import DestinationDetail from "./routes/destination/destinationId/destination-detail";
+
+import { data } from "./data/data";
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
           <Route path="/tour/:id" element={<TourDetailPage />}/>
         <Route path="/contact" element={<Contact />}/>
         <Route path="/destination" element={<Destination data={data} />}/>
+          <Route path="/destination/:id" element={<DestinationDetail data={data} />}/>
       </Routes>
       <Footer />
     </div>
