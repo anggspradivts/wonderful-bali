@@ -1,8 +1,7 @@
-import { List, Plane, X } from "lucide-react";
+import { AlignJustify, Plane } from "lucide-react";
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
@@ -14,7 +13,7 @@ const MobileNavbar = () => {
   return ( 
     <div className="bg-white">
       <Sheet>
-        <SheetTrigger><List /></SheetTrigger>
+        <SheetTrigger><AlignJustify /></SheetTrigger>
         <SheetContent side={"left"} className="bg-white">
           <SheetHeader>
             <SheetTitle><Plane /></SheetTitle>

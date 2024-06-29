@@ -10,7 +10,6 @@ import About from "./routes/about/about";
 import Destination from "./routes/destination/destination";
 
 import { data } from "./data/data";
-import Tour from "./routes/tour/tour";
 import Contact from "./routes/contact/contact";
 import Tour2 from "./routes/tour/tour2";
 

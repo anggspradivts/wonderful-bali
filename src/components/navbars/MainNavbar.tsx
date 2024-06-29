@@ -1,10 +1,7 @@
-import clsx from "clsx";
 import { Plane } from "lucide-react";
-import { Link, useLocation } from "react-router-dom";
 import NavbarRoutes from "../navbar-routes";
 
 const MainNavbar = () => {
-  const location = useLocation();
 
   return (
     <div className="flex w-full font-semibold">

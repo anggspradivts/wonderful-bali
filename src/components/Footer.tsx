@@ -16,22 +16,22 @@ const Footer = () => {
             <h2 className="text-xl font-bold mb-4">Quick Links</h2>
             <ul className="space-y-2">
               <li>
-                <a href="/tours" className="hover:text-gray-300">
+                <a href="/tour" className="hover:text-sky-300">
                   Tours
                 </a>
               </li>
               <li>
-                <a href="/about" className="hover:text-gray-300">
+                <a href="/about" className="hover:text-sky-300">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="/contact" className="hover:text-gray-300">
+                <a href="/contact" className="hover:text-sky-300">
                   Contact
                 </a>
               </li>
               <li>
-                <a href="/faq" className="hover:text-gray-300">
+                <a href="/faq" className="hover:text-sky-300">
                   FAQ
                 </a>
               </li>
@@ -43,26 +43,26 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <span className="font-semibold">Phone:</span>
-                <a href="tel:+1234567890" className="hover:text-gray-300">
+                <a href="tel:+1234567890" className="hover:text-sky-300">
                   {" "}
-                  +1 234 567 890
+                  +6281 2466 6738 3
                 </a>
               </li>
               <li>
                 <span className="font-semibold">Email:</span>
                 <a
                   href="mailto:info@travelagency.com"
-                  className="hover:text-gray-300"
+                  className="hover:text-sky-300"
                 >
                   {" "}
-                  info@travelagency.com
+                  anggapradivta941@gmail.com
                 </a>
               </li>
               <li>
                 <span className="font-semibold">Address:</span>
-                <span className="text-gray-400">
+                <span className="text-slate-400 italic">
                   {" "}
-                  123 Travel St, Adventure City, TX 78901
+                  Indonesia, Bali, Gianyar City
                 </span>
               </li>
             </ul>

@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Tour2 = () => {
   const tourPackages = [
@@ -44,7 +44,7 @@ const Tour2 = () => {
             <div className="md:w-9/12 p-1">
               <p className="text-xl font-semibold">{item.title}</p>
               <p>{item.description}</p>
-              <p className="italic text-sky-500">click to see more</p>
+              <p className="italic text-sky-500">click to see details</p>
             </div>
           </div>
         ))}

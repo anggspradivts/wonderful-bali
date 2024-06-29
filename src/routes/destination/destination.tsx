@@ -38,7 +38,7 @@ const Destination: React.FC<DestinationProps> = ({ data }) => {
               <img src={destination.img} alt="" className="h-full w-full object-cover" />
             </div>
             <div className="w-10/12">
-              <p className="text-lg">{destination.name}</p>
+              <p className="text-lg font-semibold">{destination.name}</p>
               <p className="text-xs md:text-md">{destination.description}</p>
             </div>
           </div>

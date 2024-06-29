@@ -24,7 +24,7 @@ const Contact = () => {
       </header>
       <div className="grid md:grid-cols-2">
         <div className="contac-sec">
-          <div className="p-5 shadow-md shadow-sky-500">
+          <div className="p-5 border border-sky-500">
             <form
               onSubmit={handleSubmit}
               action="mailto:anggapradivta941@gmail.com?subject=Kepentingan%20Bisnis"

@@ -14,10 +14,9 @@ const Home = () => {
     <div className="flex flex-col text-center w-full">
       <div className="text-center py-40 md:py-28">
         <h1 className="text-6xl font-extrabold montserrat">
-          Wonderfull Places
+          <span className="text-green-500">Wonderfull</span> Places
         </h1>
-        <h1 className="text-6xl font-extrabold montserrat">In Bali</h1>
-        {/* <h1>In Bali</h1> */}
+        <h1 className="text-6xl font-extrabold montserrat">In <span className="">Bali</span></h1>
       </div>
       <div className="grid md:grid-cols-3 gap-10">
         {place.map((card, index) => (
