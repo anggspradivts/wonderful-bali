@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router-dom";
-// import { data } from "../../data/data";
 import LoaderBtn from "../../components/ui/LoaderBtn";
 
 interface HomeProps {
