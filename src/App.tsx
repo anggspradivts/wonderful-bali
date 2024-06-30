@@ -12,7 +12,7 @@ import Tour2 from "./routes/tour/tour2";
 import TourDetailPage from "./routes/tour/tourId/tourdetail";
 import DestinationDetail from "./routes/destination/destinationId/destination-detail";
 
-import { data, data2 } from "./data/data";
+import { data2 } from "./data/data";
 
 function App() {
 
