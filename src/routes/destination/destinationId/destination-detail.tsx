@@ -48,7 +48,7 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ data }) => {
             </p>
             <div className="flex flex-nowrap h-[200px] max-w-[300px] sm:max-w-[600px] md:w-full overflow-x-auto gap-2">
               {findDestination.popular_places.map((place, index) => (
-                <div key={index} className="h-full w-[200px] flex-shrink-0 text-center">
+                <div key={index} className="h-full w-[200px] flex-shrink-0 text-center space-y-1">
                   <div className="w-auto h-4/5 bg-slate-200">
                     <img
                       src="/goa-gajah.jpeg"
@@ -56,7 +56,7 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ data }) => {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <p className="w-auto h-1/5">{place.name}</p>
+                  <p className="w-auto h-1/5 text-sm">{place.name}</p>
                 </div>
               ))}
               <div className="h-full w-[200px] flex-shrink-0 text-center">

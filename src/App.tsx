@@ -20,7 +20,7 @@ function App() {
     <div className="px-5 md:px-20">
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home data={data2} />} />
         <Route path="/about" element={<About />} />
         <Route path="/tour" element={<Tour2 />}/>
           <Route path="/tour/:id" element={<TourDetailPage />}/>

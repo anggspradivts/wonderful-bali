@@ -1,8 +1,16 @@
 import { useNavigate } from "react-router-dom";
-import { data } from "../../data/data";
+// import { data } from "../../data/data";
 import LoaderBtn from "../../components/ui/LoaderBtn";
 
-const Home = () => {
+interface HomeProps {
+  data: {
+    id: string;
+    name: string;
+    img: string;
+    description: string;
+  }[]
+}
+const Home: React.FC<HomeProps> = ({ data }) => {
   const place = data.slice(0, 3);
   const navigate = useNavigate();
 
@@ -22,7 +30,7 @@ const Home = () => {
       </div>
       <div className="grid md:grid-cols-3 gap-10">
         {place.map((card, index) => (
-          <div key={index} className="p-1">
+          <div key={index} className="p-1 space-y-3">
             <div
               role="button"
               onClick={() => navigate(`/destination/${card.id}`)}
@@ -35,7 +43,7 @@ const Home = () => {
               />
             </div>
             <div>
-              <p className="text-lg">{card.name}</p>
+              <p className="text-lg font-semibold">{card.name}</p>
               <p className="text-sm">{card.description}</p>
             </div>
           </div>
