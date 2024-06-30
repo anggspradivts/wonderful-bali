@@ -1,5 +1,4 @@
 
-
 import "./App.css";
 import "./font.css";
 import { Route, Routes } from "react-router-dom";
@@ -13,7 +12,7 @@ import Tour2 from "./routes/tour/tour2";
 import TourDetailPage from "./routes/tour/tourId/tourdetail";
 import DestinationDetail from "./routes/destination/destinationId/destination-detail";
 
-import { data } from "./data/data";
+import { data, data2 } from "./data/data";
 
 function App() {
 
@@ -26,8 +25,8 @@ function App() {
         <Route path="/tour" element={<Tour2 />}/>
           <Route path="/tour/:id" element={<TourDetailPage />}/>
         <Route path="/contact" element={<Contact />}/>
-        <Route path="/destination" element={<Destination data={data} />}/>
-          <Route path="/destination/:id" element={<DestinationDetail data={data} />}/>
+        <Route path="/destination" element={<Destination data={data2} />}/>
+          <Route path="/destination/:id" element={<DestinationDetail data={data2} />}/>
       </Routes>
       <Footer />
     </div>

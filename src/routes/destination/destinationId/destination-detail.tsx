@@ -1,5 +1,10 @@
 import { useParams } from "react-router-dom";
 
+interface popularPlace {
+  name: string;
+  url: string;
+  img: string;
+}
 interface DestinationDetailProps {
   data: {
     id: string;
@@ -7,6 +12,7 @@ interface DestinationDetailProps {
     img: string;
     description: string;
     url: string;
+    popular_places: popularPlace[];
   }[];
 }
 const DestinationDetail: React.FC<DestinationDetailProps> = ({ data }) => {
@@ -38,20 +44,31 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ data }) => {
           </div>
           <div className="w-full">
             <p className="font-semibold">
-              Popular places in {findDestination.name}: "dummy data"
+              Popular places in {findDestination.name}:
             </p>
             <div className="flex flex-nowrap h-[200px] max-w-[300px] sm:max-w-[600px] md:w-full overflow-x-auto gap-2">
+              {findDestination.popular_places.map((place, index) => (
+                <div key={index} className="h-full w-[200px] flex-shrink-0 text-center">
+                  <div className="w-auto h-4/5 bg-slate-200">
+                    <img
+                      src="/goa-gajah.jpeg"
+                      alt=""
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <p className="w-auto h-1/5">{place.name}</p>
+                </div>
+              ))}
               <div className="h-full w-[200px] flex-shrink-0 text-center">
                 <div className="w-auto h-4/5 bg-slate-200">
-                  <img src="/goa-gajah.jpeg" alt="" className="w-full h-full object-cover"/>
+                  <img
+                    src="/goa-gajah.jpeg"
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <p className="w-auto h-1/5">Goa Gajah</p>
               </div>
-              <div className="h-full w-[200px] flex-shrink-0 bg-slate-300">Item 2</div>
-              <div className="h-full w-[200px] flex-shrink-0 bg-slate-300">Item 3</div>
-              <div className="h-full w-[200px] flex-shrink-0 bg-slate-300">Item 4</div>
-              <div className="h-full w-[200px] flex-shrink-0 bg-slate-300">Item 5</div>
-              <div className="h-full w-[200px] flex-shrink-0 bg-slate-300">Item 6</div>
             </div>
           </div>
         </div>
