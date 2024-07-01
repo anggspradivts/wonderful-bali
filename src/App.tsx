@@ -1,15 +1,15 @@
 import "./App.css";
 import "./font.css";
 import { Route, Routes } from "react-router-dom";
-import Home from "./routes/home/home";
+import Home from "./pages/home/home";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import About from "./routes/about/about";
-import Destination from "./routes/destination/destination";
-import Contact from "./routes/contact/contact";
-import Tour2 from "./routes/tour/tour2";
-import TourDetailPage from "./routes/tour/tourId/tourdetail";
-import DestinationDetail from "./routes/destination/destinationId/destination-detail";
+import About from "./pages/about/about";
+import Destination from "./pages/destination/destination";
+import Contact from "./pages/contact/contact";
+import Tour2 from "./pages/tour/tour2";
+import TourDetailPage from "./pages/tour/tourId/tourdetail";
+import DestinationDetail from "./pages/destination/destinationId/destination-detail";
 
 import { data2 } from "./data/data";
 
