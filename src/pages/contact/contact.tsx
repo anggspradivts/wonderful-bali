@@ -97,7 +97,7 @@ const Contact = () => {
             <div>
               <Link to="https://www.instagram.com/codetillidie/">
                 {/* <img className="socmed-icon h-10" src={instagramIcon} alt="" /> */}
-                <span className="hover:text-black border-b border-white hover:border-black">
+                <span className="hover:text-slate-200 border-b border-white hover:border-slate-200">
                   Instagram ↗
                 </span>
               </Link>
@@ -105,7 +105,7 @@ const Contact = () => {
             <div>
               <Link to="https://github.com/anggspradivts">
                 {/* <img className="h-10" src={githubIcon} alt="" /> */}
-                <span className="hover:text-black border-b border-white hover:border-black">
+                <span className="hover:text-slate-200 border-b border-white hover:border-slate-200">
                   GitHub ↗
                 </span>
               </Link>
@@ -113,7 +113,7 @@ const Contact = () => {
             <div>
               <Link to="">
                 {/* <img className="h-10" src={twitterIcon} alt="" /> */}
-                <span className="hover:text-black border-b border-white hover:border-black">
+                <span className="hover:text-slate-200 border-b border-white hover:border-slate-200">
                   Twitter ↗
                 </span>
               </Link>

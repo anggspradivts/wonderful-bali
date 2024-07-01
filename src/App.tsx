@@ -12,10 +12,27 @@ import TourDetailPage from "./pages/tour/tourId/tourdetail";
 import DestinationDetail from "./pages/destination/destinationId/destination-detail";
 
 import { data2 } from "./data/data";
+import GotoTopBtn from "./components/ui/gototop-btn";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const toggleVisibility = () => {
+    if (window.scrollY > 300) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', toggleVisibility);
+    return () => window.removeEventListener('scroll', toggleVisibility);
+  }, []);
+
   return (
-    <div className="px-5 md:px-20">
+    <div className="px-5 md:px-20 transition-all duration-300">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home data={data2} />} />
@@ -29,6 +46,11 @@ function App() {
           element={<DestinationDetail data={data2} />}
         />
       </Routes>
+      {isVisible && (
+        <div className="fixed bottom-5 right-5 md:bottom-20 md:right-20 ">
+          <GotoTopBtn />
+        </div>
+      )}
       <Footer />
     </div>
   );

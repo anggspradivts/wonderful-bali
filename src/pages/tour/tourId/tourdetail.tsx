@@ -52,9 +52,9 @@ const TourDetailPage = () => {
   return (
     <div className="py-20">
       <div className="grid md:grid-cols-2 h-screen gap-x-5">
-        <div className="sidebar">
-          <p className="text-2xl">List of Feature on package {id}</p>
-          <div className="md:grid md:grid-cols-1 max-h-[100px] md:max-h-full overflow-auto space-y-1">
+        <div className="sidebar space-y-3">
+          <p className="text-2xl font-semibold montserrat text-center md:text-start">List of Feature on package {id}</p>
+          <div className="md:grid md:grid-cols-1 mx-10 md:mx-0 p-2 border border-slate-400 md:border-none max-h-[150px] md:max-h-full overflow-auto space-y-1 rounded">
             {feature.map((f) => (
               <div key={f.id}>
                 <button

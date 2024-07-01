@@ -18,8 +18,8 @@ const About = () => {
     <div>
       <div className="flex md:text-end md:justify-end my-20">
         <header className="text-4xl md:text-6xl montserrat font-bold">
-          <h1 className="text-green-500">Your Trip</h1>
-          <h1 className="text-sky-500">Your Adventure</h1>
+          <h1 className="text-green-500">Our Trip</h1>
+          <h1 className="text-sky-500">Our Adventure</h1>
         </header>
       </div>
       <div className="grid md:grid-cols-2 gap-10">

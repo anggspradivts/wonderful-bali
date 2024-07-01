@@ -18,7 +18,7 @@ const LoaderBtn: React.FC<LoaderBtnProps> = ({ content, onClick }) => {
   }
 
   return (
-    <button onClick={handleClick} disabled={isLoading} className="p-2 rounded bg-sky-500 text-white hover:bg-sky-600 transition-all duration-300">
+    <button onClick={handleClick} disabled={isLoading} className="p-2 rounded bg-green-500 text-white hover:bg-green-600 transition-all duration-300">
       {isLoading ? <Loader2 className="animate-spin" /> : content}
     </button>
   );

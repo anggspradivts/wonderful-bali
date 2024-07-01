@@ -12,6 +12,7 @@ interface DestinationProps {
   }[];
 }
 const Destination: React.FC<DestinationProps> = ({ data }) => {
+  const [query, setQuery] = useState("")
   const [loadMore, setLoadMore] = useState(3);
   const topPlaces = data.slice(0, loadMore);
   const navigate = useNavigate();
@@ -28,8 +29,11 @@ const Destination: React.FC<DestinationProps> = ({ data }) => {
       <div className="flex justify-center items-center">
         <input
           type="text"
-          placeholder="find destination..."
-          className="w-[500px] p-3 shadow-2xl"
+          id="query"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="find destination... 'not worked yet'"
+          className="w-[500px] p-3 shadow-2xl rounded-xl border border-slate-300"
         />
       </div>
       <div className="destination-sec md:mx-36 mt-10 space-y-4">
