@@ -3,12 +3,12 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 
 const TourDetailPage = () => {
+  const { id } = useParams();
   const [featureState, setFeatureState] = useState({
     id: "",
     name: "",
     description: "",
   });
-  const { id } = useParams();
 
   const feature = [
     {
@@ -55,8 +55,8 @@ const TourDetailPage = () => {
         <div className="sidebar">
           <p className="text-2xl">List of Feature on package {id}</p>
           <div className="md:grid md:grid-cols-1 max-h-[100px] md:max-h-full overflow-auto space-y-1">
-            {feature.map((f, index) => (
-              <div key={index}>
+            {feature.map((f) => (
+              <div key={f.id}>
                 <button
                   onClick={() =>
                     setFeatureState({
@@ -104,5 +104,3 @@ const TourDetailPage = () => {
 };
 
 export default TourDetailPage;
-
-// This is still on demo
